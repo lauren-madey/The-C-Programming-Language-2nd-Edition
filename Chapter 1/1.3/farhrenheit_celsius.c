@@ -4,7 +4,7 @@
 for fahr = 0, 20, ..., 300; floating-point version 
 */
 
-main(){
+int main(){
     int fahr;
 
     for(fahr = 0; fahr <=300; fahr = fahr +20){
