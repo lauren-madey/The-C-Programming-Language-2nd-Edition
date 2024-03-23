@@ -1,0 +1,33 @@
+
+
+No semicolon at end of define
+
+'\n' is a single character and in its expressions is just an integer
+on the other hand
+"\n" is a string constant that happens to only contain one character
+
+The numeric values that are shown for characters are using the ASCII character set in C programming. Character sets in the 1970's were quite intrictate. Most were eight bits long to conserve computer memory and only support 100 or so supported Latin-like characters. This is why early programming languages use special characters like * and in their syntax very carefully. They needed to choose characters that were commonly available on computer keyboards from different manufacturers.
+
+Modern languages like Python 3 and Ruby store internal string values using the Unicode character set so they are able to represent all characters in all languages around the world. Modern languages tend to represent eight bit values (range 0-256) using a byte or similar type. Python 2 strings were stored as
+8-bit bytes and Python 3 strings are stored as 32-bit Unicode characters. Moving to Unicode was a major effort in the Python 2 to Python 3 transition.
+
+Assignments associate from right to left 
+e.g. 
+nl = nw = nc = 0; 
+is the same as 
+nl = (nw = (nc = 0));
+
+Expressions evaluated by && or || are evaluted from left to right and will stop as soon as the truth or falsehood is known
+
+ARRAYS
+The number of elements in an array declaration must be a constant at compile time and the size of an array cannot be adjusted using an array declaration while the program is running.
+
+This inability to automatically resize C arrays as data is added, leads to a class of security flaws that are generally referred to as "buffer overflow" where a program reads more data than can fit into an array and is tricked to overwriting other data or code and compromising an application.
+
+Fear not dynamic array-like structures can be created in C using pointers and the standard library calloc() function.
+
+Python has support for non-dynamic arrays (buffers). Python buffers are generally not used except for programmers writing library code that talks to low-level code written in a language other than Python or talking to the operating system such as Linux. The more commonly used Python list and dict structures can change their sizes automatically as elements are added and deleted at run-time.
+
+Java has support for non-dynamic arrays like C which are given a length at the moment they are created and the array length cannot be increased nor decreased without making a new array and copying all the elements from the first to the second array. Java provides list and map structures that automatically adjust their length as data is added or removed. Java has a class called an ArrayList which can be dynamically extended but provides array-like linear access. It is a list internally but can be used like an array externally.
+
+The underlying technique that is used to implement language structures like Python's list is dynamic memory allocation and a "linked list" structure. Linked lists are one of the most important data structures in all of Computer Science.

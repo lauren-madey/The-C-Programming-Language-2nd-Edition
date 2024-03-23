@@ -8,7 +8,6 @@ for fahr = 0, 20, ..., 300; floating-point version
 #define UPPER 300 /* upper limit */
 #define STEP 20 /* step size */
 
-// no semicolon at end of define
 
 main(){
     int fahr;
