@@ -2,7 +2,7 @@
 
 int main(){
     int c, i, nwhite, nother;
-    int ndigit[10];
+    int ndigit[10]; // array of 10 integers
 
     nwhite = nother = 0;
     for (i = 0; i < 10; i++)
